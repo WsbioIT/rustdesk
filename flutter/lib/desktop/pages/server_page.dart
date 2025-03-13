@@ -1148,6 +1148,7 @@ void checkClickTime(int id, Function() callback) async {
 }
 
 bool allowRemoteCMModification() {
+  return false;
   return option2bool(kOptionAllowRemoteCmModification,
       bind.mainGetLocalOption(key: kOptionAllowRemoteCmModification));
 }
