@@ -85,7 +85,7 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
   var _allowAutoDisconnect = false;
   var _localIP = "";
   var _directAccessPort = "";
-  var _fingerprint = "";
+  var _fingerprint = ""; 
   var _buildDate = "";
   var _autoDisconnectTimeout = "";
   var _hideServer = false;
@@ -96,8 +96,6 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
   _SettingsState() {
     _enableAbr = option2bool(
         kOptionEnableAbr, bind.mainGetOptionSync(key: kOptionEnableAbr));
-    _denyLANDiscovery = !option2bool(kOptionEnableLanDiscovery,
-        bind.mainGetOptionSync(key: kOptionEnableLanDiscovery));
     _onlyWhiteList = whitelistNotEmpty();
     _enableDirectIPAccess = option2bool(
         kOptionDirectServer, bind.mainGetOptionSync(key: kOptionDirectServer));
